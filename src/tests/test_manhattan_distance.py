@@ -6,7 +6,7 @@ def test_manhattan_distance_2_puntos_iguales():
     point2 = Point(1, 2)
     assert manhattan_distance(point1, point2) == 0
 
-def test_manhattan_distance_2_puntos_distintos():
-    point1 = Point(1, 2)
-    point2 = Point(3, 4)
-    assert manhattan_distance(point1, point2) == 4
+def test_manhattan_distance_2_puntos_distintos_eje_x():
+    point1 = Point(5, 0)
+    point2 = Point(0, 0)
+    assert manhattan_distance(point1, point2) == 5
