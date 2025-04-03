@@ -20,3 +20,8 @@ def test_manhattan_distance_2_puntos_distintos_ejes_diagonal():
     point1 = Point(1, 2)
     point2 = Point(5, 3)
     assert manhattan_distance(point1, point2) == 5
+
+def test_manhattan_distance_2_puntos_distintos_ejes_negativos_x():
+    point1 = Point(-1, 2)
+    point2 = Point(-5, 3)
+    assert manhattan_distance(point1, point2) == 5
