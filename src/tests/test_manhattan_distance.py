@@ -56,4 +56,18 @@ def test6_6_manhattan_distance_eje_X_distinto_eje_Y_distinto_invertido():
     point2 = Point(2, 3)
     assert manhattan_distance(point1, point2) == 5
 
-    
+def test7_manhattan_distance_2_puntos_distintos_ejes_negativos():
+    # caso 1: Negativo en eje X, el resto 0
+    assert manhattan_distance(Point(-5, 0), Point(0, 0)) == 5
+    # caso 2: Negativo en eje Y, el resto 0
+    assert manhattan_distance(Point(0, -5), Point(0, 0)) == 5
+    # caso 3: punto1 negativo en eje X y Y, punto 2 positivo
+    assert manhattan_distance(Point(-5, -6), Point(2, 2)) == 15
+    # caso 4: punto1 positivo en eje X y Y, punto 2 negativo
+    assert manhattan_distance(Point(5, 7), Point(-2, -2)) == 16
+    # caso 5: punto1 negativo en eje X positivo en eje Y, punto 2 positivo en eje X negativo en eje Y
+    assert manhattan_distance(Point(-5, 6), Point(2, -2)) == 15
+    # caso 6: punto1 positivo en eje X negativo en eje Y, punto 2 negativo en eje X positivo en eje Y
+    assert manhattan_distance(Point(5, -8), Point(-2, 2)) == 17
+    # caso 7: Ambos puntos negativos en eje X y Y
+    assert manhattan_distance(Point(-5, -6), Point(-2, -2)) == 7
