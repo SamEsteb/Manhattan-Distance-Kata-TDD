@@ -4,6 +4,4 @@ class Point:
         self.y = y
 
 def manhattan_distance(point1, point2):
-    diff_x = abs(point1.x - point2.x)
-    diff_y = abs(point1.y - point2.y)
-    return diff_x + diff_y
+    return abs(point1.x - point2.x) + abs(point1.y - point2.y)
