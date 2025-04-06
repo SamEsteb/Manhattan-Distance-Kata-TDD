@@ -26,19 +26,34 @@ def test5_manhattan_distance_2_puntos_distintos_eje_Y_punto1y_menor_punto2y():
     point2 = Point(0, 12)
     assert manhattan_distance(point1, point2) == 8
 
-def test6_manhattan_distance_2_puntos_distintos_ambos_ejes():
-    # caso 1: Eje X distinto y Eje Y igual
-    assert manhattan_distance(Point(2,3), Point(5,3)) == 3
-    # caso 2: Eje X igual y Eje Y distinto
-    assert manhattan_distance(Point(2,3), Point(2,5)) == 2
-    # caso 3: Eje X distinto y Eje Y distinto
-    assert manhattan_distance(Point(2,3), Point(5,5)) == 5
+def test6_1_manhattan_distance_eje_X_distinto_eje_Y_igual():
+    point1 = Point(2, 3)
+    point2 = Point(5, 3)
+    assert manhattan_distance(point1, point2) == 3
 
-    # caso 4: Eje X distinto y Eje Y igual (puntos invertidos)
-    assert manhattan_distance(Point(5,3), Point(2,3)) == 3
-    # caso 5: Eje X igual y Eje Y distinto (puntos invertidos)
-    assert manhattan_distance(Point(2,5), Point(2,3)) == 2
-    # caso 6: Eje X distinto y Eje Y distinto (puntos invertidos)
-    assert manhattan_distance(Point(5,5), Point(2,3)) == 5
+def test6_2_manhattan_distance_eje_X_igual_eje_Y_distinto():
+    point1 = Point(2, 3)
+    point2 = Point(2, 5)
+    assert manhattan_distance(point1, point2) == 2
+
+def test6_3_manhattan_distance_eje_X_distinto_eje_Y_distinto():
+    point1 = Point(2, 3)
+    point2 = Point(5, 5)
+    assert manhattan_distance(point1, point2) == 5
+
+def test6_4_manhattan_distance_eje_X_distinto_eje_Y_igual_invertido():
+    point1 = Point(5, 3)
+    point2 = Point(2, 3)
+    assert manhattan_distance(point1, point2) == 3
+
+def test6_5_manhattan_distance_eje_X_igual_eje_Y_distinto_invertido():
+    point1 = Point(2, 5)
+    point2 = Point(2, 3)
+    assert manhattan_distance(point1, point2) == 2
+
+def test6_6_manhattan_distance_eje_X_distinto_eje_Y_distinto_invertido():
+    point1 = Point(5, 5)
+    point2 = Point(2, 3)
+    assert manhattan_distance(point1, point2) == 5
 
     
