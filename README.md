@@ -1,6 +1,6 @@
 # Manhattan-Distance-Kata-TDD
 
-Repositorio de práctica de **Test-Driven Development (TDD)**.
+Repositorio de práctica de **Test-Driven Development (TDD)** usando el [Manhattan Distance Kata](https://kata-log.rocks/manhattan-distance-kata).
 
 ## Requisitos
 
